@@ -11,7 +11,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-V_DISP = False
+V_DISP = True
 LOAD_IMGS = False
 MAKE_CSV_FROM_LIST = False
 MAKE_CSV_FROM_DATA_FRAME = True
@@ -65,7 +65,7 @@ def selenium_scraping():
 
     # make csv
     if MAKE_CSV_FROM_LIST: make_csv_from_list(data, 'output', [], sep=',', drop_duplicates=True)
-    elif MAKE_CSV_FROM_DATA_FRAME: make_csv_form_data_frame(data, "output_data", sep=';', drop_duplicates=False)
+    elif MAKE_CSV_FROM_DATA_FRAME: make_csv_form_data_frame(data, "heroku_output_data", sep=';', drop_duplicates=False)
 
     # quit
     if CLOSE: close_webdriver(driver, display, start_time)
