@@ -263,4 +263,5 @@ def custom_behaviour(driver):
     if 'Unnamed: 0' in df.columns: df.rename(columns={'Unnamed: 0': ''}, inplace=True)
     return df
 
-selenium_scraping()
+if __name__=='__main__':
+    selenium_scraping()
