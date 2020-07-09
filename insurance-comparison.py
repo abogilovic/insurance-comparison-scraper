@@ -4,14 +4,13 @@ from datetime import datetime
 import pandas as pd
 from pyvirtualdisplay import Display
 from selenium import webdriver
-from selenium.common.exceptions import TimeoutException
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-V_DISP = True
+V_DISP = False
 LOAD_IMGS = False
 MAKE_CSV_FROM_LIST = False
 MAKE_CSV_FROM_DATA_FRAME = True
@@ -54,8 +53,8 @@ def make_csv_form_data_frame(df, name, sep=',', drop_duplicates=True):
 def selenium_scraping():
     # driver and display initialisation
     setup_data = setup_chrome_webdriver(virtual_display=V_DISP, load_imgs=LOAD_IMGS)
-    driver = setup_data[0];
-    display = setup_data[1];
+    driver = setup_data[0]
+    display = setup_data[1]
     start_time = setup_data[2]
     animation = ["[#.........]", "[##........]", "[###.......]", "[####......]", "[#####.....]", "[######....]",
                  "[#######...]", "[########..]", "[#########.]", "[##########]"]
