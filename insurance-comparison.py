@@ -17,7 +17,7 @@ MAKE_CSV_FROM_LIST = False
 MAKE_CSV_FROM_DATA_FRAME = True
 CLOSE = True
 
-def setup_chrome_webdriver(path="/home/gillabo/Desktop/upwork/chromedriver",
+def setup_chrome_webdriver(path="./chromedriver",
                            virtual_display=False, load_imgs=False, maximized=True, headless=False):
     display = None
     if virtual_display:
